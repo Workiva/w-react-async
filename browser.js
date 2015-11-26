@@ -1,6 +1,6 @@
 "use strict";
 
-var invariant               = require('react/lib/invariant');
+var invariant               = require('fbjs/lib/invariant');
 var Preloaded               = require('./lib/Preloaded');
 var getComponentFingerprint = require('./lib/getComponentFingerprint');
 var prefetchAsyncState      = require('./lib/prefetchAsyncState');
