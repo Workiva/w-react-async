@@ -1,6 +1,7 @@
 "use strict";
 
 var React                   = require('react');
+var server                  = require('react-dom/server');
 var invariant               = require('fbjs/lib/invariant');
 var Preloaded               = require('./lib/Preloaded');
 var getComponentFingerprint = require('./lib/getComponentFingerprint');
@@ -81,7 +82,7 @@ function renderToStringAsync(component, cb) {
       Fiber.current.__reactAsyncStatePacket = {};
 
       var data = Fiber.current.__reactAsyncStatePacket;
-      var markup = React.renderToString(component);
+      var markup = server.renderToString(component);
 
       // Inject data if callback doesn't receive the data argument
       if (cb.length == 2) {

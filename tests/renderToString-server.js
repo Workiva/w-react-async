@@ -1,5 +1,6 @@
 var assert                  = require('assert');
 var React                   = require('react');
+var server                  = require('react-dom/server');
 var ReactAsync              = require('../index');
 var Fiber                   = require('fibers');
 
@@ -25,7 +26,7 @@ describe('React.renderComponentToString (server)', function() {
 
   it('works inside Fiber', function() {
     Fiber(function() {
-      var markup = React.renderToString(React.createElement(Async));
+      var markup = server.renderToString(React.createElement(Async));
       assert(markup.indexOf('<div') > -1);
       assert(markup.indexOf('hello') === -1);
     }).run();
