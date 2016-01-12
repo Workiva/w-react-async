@@ -11,7 +11,7 @@
     "ascii-json": "~0.2.0"
   },
   "peerDependencies": {
-    "react": "^0.13.0"
+    "react": "0.14.6"
   },
   "devDependencies": {
     "axios": "^0.5.2",
@@ -25,7 +25,7 @@
     "mocha": "~1.21.5",
     "mochify": "^1.4.0",
     "phantomjs": "^1.9.11",
-    "react": "^0.13.0",
+    "react": "0.14.6",
     "rx": "^2.5.1",
     "semver": "~4.1.0"
   },
